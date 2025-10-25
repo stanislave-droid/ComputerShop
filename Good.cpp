@@ -19,14 +19,23 @@ bool Good::SearchInGood(std::string property)
 
 void Good::ChangeStatsInProduct()
 {
-    std::cout << "\nProduct " << id << std::endl;
-    std::cout << "Write product name: ";
-    std::cin >> this->name;
-    std::cout << "Write product producer: ";
-    std::cin >> this->producer;
-    std::cout << "Write product frequency: ";
-    std::cin >> this->frequency;
-    std::cout << "Write product size: ";
-    std::cin >> this->size;
+    while (true) {
+        std::cout << "\nProduct " << id << std::endl;
+        std::cout << "Write product name: ";
+        std::cin >> name;
+        std::cout << "Write product producer: ";
+        std::cin >> producer;
+        std::cout << "Write product frequency: ";
+        std::cin >> frequency;
+        std::cout << "Write product size: ";
+        std::cin >> size;
+
+        if (std::cin.fail()) {
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
+            std::cerr << "\n\nWrong answer 0_0, try again\n";
+        }
+        else { break; }
+    }
 }
 

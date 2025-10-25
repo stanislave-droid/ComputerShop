@@ -5,12 +5,12 @@
 
 int option();
 
-int Good::count = 0;
+int Good::count = 1;
 
 int main()
 {
     std::cout << "Hello, i am Stinislave!\n";
-    std::cout << "This is my project to practice 1.\n";
+    std::cout << "This is my project to practice 1. (ver 2.0)\n";
     std::cout << "I hope you like it, i tried my best!\n";
 
     Tables t;
@@ -35,11 +35,11 @@ int option() {
 
     while (true) {
         std::cout << "\n1. Open shop 2. Add new goods 3. Search by name" << std::endl;
-        std::cout << "Select an option available above: ";
+        std::cout << "\Select an option available above: ";
 
         std::cin >> which;
         if (which == "1" || which == "2" || which == "3") { break; }
-        else { std::cerr << "\nWrong answer, try again\n";  continue; }
+        else { std::cerr << "\nWrong answer, try again\n";  std::cin.clear(); std::cin.ignore(10000, '\n'); continue; }
     }
 
     return std::stoi(which);

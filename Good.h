@@ -12,7 +12,7 @@ public:
 	std::string size;
 
 	Good() {
-		id = ++count;
+		id = count;
 		name = "";
 		producer = "";
 		frequency = -1;

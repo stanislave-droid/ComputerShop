@@ -4,7 +4,7 @@
 
 class Tables
 {
-	int rows = 1;
+	//int rows = 1;
 	void CreateTable();
 	void AddProducts();
 public:
